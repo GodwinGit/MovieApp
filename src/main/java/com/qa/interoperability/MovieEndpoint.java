@@ -33,5 +33,13 @@ public class MovieEndpoint {
 		
 		return service.getAMovie(id);
 	}
+	
+	@Path("/json")
+	@POST
+	@Produces({ "application/json" })
+	public String createMovie(String jsonString) {
+		
+		return service.createMovie(jsonString);
 
+}
 }
